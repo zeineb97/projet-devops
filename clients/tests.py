@@ -7,7 +7,7 @@ from clients.models import Client
 from freezegun import freeze_time
 
 
-@freeze_time("2020-01-01")
+@freeze_time("2020-01-02")
 class TestClient(TestCase):
 
     def test_age(self):
