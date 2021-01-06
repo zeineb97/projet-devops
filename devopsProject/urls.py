@@ -16,13 +16,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
+from django.conf.urls.static import static
 
 from clients.views import UserViewSet
+from devopsProject import settings
 
 router = DefaultRouter(trailing_slash=False)
 router.register(r'clients', UserViewSet, basename="clients")
 
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include(router.urls))
-]
+urlpatterns = \
+    [
+        path('admin/', admin.site.urls),
+        path('', include(router.urls))
+    ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
