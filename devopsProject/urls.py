@@ -22,6 +22,7 @@ from clients.views import UserViewSet
 from devopsProject import settings
 
 router = DefaultRouter(trailing_slash=False)
+
 router.register(r'clients', UserViewSet, basename="clients")
 
 urlpatterns = \
