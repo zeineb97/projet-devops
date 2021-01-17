@@ -1,8 +1,6 @@
 # Project Name 
-![Project Image] (https://dpsvdv74uwwos.cloudfront.net/statics/img/product-pages/devops.png)
 
-
-![Project Image](project-image-url)
+![Project Image](https://dpsvdv74uwwos.cloudfront.net/statics/img/product-pages/devops.png)
 
 > This is a ReadMe template to help save you time and effort.
 
