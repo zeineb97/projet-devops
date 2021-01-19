@@ -1,54 +1,83 @@
-# Project Name 
+# End of Semester Project
 
 ![Project Image](https://dpsvdv74uwwos.cloudfront.net/statics/img/product-pages/devops.png)
 
-> This is a ReadMe template to help save you time and effort.
-
+> This project is an academic project developed within the framework of validation of the theoretical knowledge and practical skills acquired in the 2 subjects; DevOps and Deployment for students in 5th year software engineering at [INSAT](http://www.insat.rnu.tn) with the option: DevOps and software testing.
 ---
 
-> Start Project GL5
-
-Foobar is a Python library for dealing with word pluralization.
+> Start Project GL5 - Developed by Zeineb Chabchoub
 
 ### Table of contents
-You're sections headers will be used to reference location of destination.
-- [Description](#description)
-- [How To Use](#how-to-use)
-- [Refrences](#references)
-- [License](#license)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Structure](#structure)
+- [Use](#use)
+- [Live-Demo](#live-demo)
 
 
-## description
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+## requirements
+- Python 3
+- Django (3.1)
+- Django REST Framework
+- Django Rest Auth
+- Django Prometheus (2.1)
 #### Technologies 
-- Techno 1 
-- Techno 2 
+- [Django](https://www.djangoproject.com) :  A Python-based free and open-source web framework 
+- [SQlite] (https://www.sqlite.org/index.html): SQLite is a C-language library that implements a small, fast, self-contained, high-reliability, full-featured, SQL database engine. 
+- [Prometheus](https://prometheus.io) : An open-source monitoring system with a dimensional data model, flexible query language, efficient time series database and modern alerting approach.
+- [Grafana] (https://grafana.com): Grafana is the open source analytics & monitoring solution for every database.
+- [Docker] (https://www.docker.com) : Docker is a set of platform as a service products that use OS-level virtualization to deliver software in packages called containers.
+- [Docker-compose](https://github.com/docker/compose): Docker Compose is a tool for running multi-container applications on Docker defined using the Compose file format.
+- [Heroku](heroku.com): Heroku is a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.   
 
 
-## How To Use
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
-#### Installation 
-
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
-
-```bash
-pip install foobar
+## Installation
 ```
-#### API Refrences  
+	pip install django
+	pip install djangorestframework
+	pip install django-rest-auth
+	pip install django-allauth
+```
+## Structure 
 
-```python
-import foobar
+In a RESTful API, endpoints (URLs) define the structure of the API and how end users access data from our application using the HTTP methods - GET, POST, PUT, DELETE. Endpoints should be logically organized around _collections_ and _elements_, both of which are resources.
 
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
+In our case, we have two resources: 
+-  `clients`, so we will use the following URLS - `/clients/` and `/clients/<id>` for collections and elements, respectively:
+
+Endpoint |HTTP Method | CRUD Method | Result
+-- | -- |-- |--
+`clients` | GET | READ | Get all clients
+`clients/:id` | GET | READ | Get a single client
+`clients`| POST | CREATE | Create a new client
+`clients/:id` | PUT | UPDATE | Update a client
+`clients/:id` | DELETE | DELETE | Delete a client
+
+- `admin` : an automatic admin interface provided by Django, we use /admin to access to it.
+```
+Admin credentials : 
+- username: admin
+- password: 456123
 ```
 
+## Use
 
-aaa
-## License
+We can test the API using [curl](https://curl.haxx.se/) or [httpie](https://github.com/jakubroztocil/httpie#installation). Httpie is a user friendly http client that's written in Python. Let's install that.
 
+You can install httpie using pip:
+```
+pip install httpie
+```
 
-[Back To The Top ](#project-name)
+First, we have to start up Django's development server.
+```
+	python manage.py runserver
+```
+
+## Live Demo 
+This Project is deployed on Heroku. 
+- [live-demo-admin-panel](https://devops-project-cd.herokuapp.com/admin)
+
+- [live-demo-clients](https://devops-project-cd.herokuapp.com/clients)
+
+[Back To The Top ](#End-of-Semester-Project)
