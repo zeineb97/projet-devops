@@ -15,7 +15,7 @@
 - [Live-Demo](#live-demo)
 
 
-## requirements
+## Requirements
 - Python 3
 - Django (3.1)
 - Django REST Framework
@@ -23,10 +23,10 @@
 - Django Prometheus (2.1)
 #### Technologies 
 - [Django](https://www.djangoproject.com) :  A Python-based free and open-source web framework 
-- [SQlite] (https://www.sqlite.org/index.html): SQLite is a C-language library that implements a small, fast, self-contained, high-reliability, full-featured, SQL database engine. 
+- [SQlite](https://www.sqlite.org/index.html): SQLite is a C-language library that implements a small, fast, self-contained, high-reliability, full-featured, SQL database engine. 
 - [Prometheus](https://prometheus.io) : An open-source monitoring system with a dimensional data model, flexible query language, efficient time series database and modern alerting approach.
-- [Grafana] (https://grafana.com): Grafana is the open source analytics & monitoring solution for every database.
-- [Docker] (https://www.docker.com) : Docker is a set of platform as a service products that use OS-level virtualization to deliver software in packages called containers.
+- [Grafana](https://grafana.com): Grafana is the open source analytics & monitoring solution for every database.
+- [Docker](https://www.docker.com) : Docker is a set of platform as a service products that use OS-level virtualization to deliver software in packages called containers.
 - [Docker-compose](https://github.com/docker/compose): Docker Compose is a tool for running multi-container applications on Docker defined using the Compose file format.
 - [Heroku](heroku.com): Heroku is a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.   
 
@@ -42,7 +42,7 @@
 
 In a RESTful API, endpoints (URLs) define the structure of the API and how end users access data from our application using the HTTP methods - GET, POST, PUT, DELETE. Endpoints should be logically organized around _collections_ and _elements_, both of which are resources.
 
-In our case, we have two resources: 
+In our case, we have three resources: 
 -  `clients`, so we will use the following URLS - `/clients/` and `/clients/<id>` for collections and elements, respectively:
 
 Endpoint |HTTP Method | CRUD Method | Result
@@ -54,6 +54,10 @@ Endpoint |HTTP Method | CRUD Method | Result
 `clients/:id` | DELETE | DELETE | Delete a client
 
 - `admin` : an automatic admin interface provided by Django, we use /admin to access to it.
+- `Application level metrics endpoint` :  to monitor our application metrics we should navigate to `/metrics`. 
+
+
+
 ```
 Admin credentials : 
 - username: admin
@@ -76,8 +80,11 @@ First, we have to start up Django's development server.
 
 ## Live Demo 
 This Project is deployed on Heroku. 
+
 - [live-demo-admin-panel](https://devops-project-cd.herokuapp.com/admin)
 
 - [live-demo-clients](https://devops-project-cd.herokuapp.com/clients)
+
+- [live-demo-metrics](https://devops-project-cd.herokuapp.com/metrics )
 
 [Back To The Top ](#End-of-Semester-Project)
