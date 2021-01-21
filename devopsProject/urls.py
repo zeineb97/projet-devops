@@ -17,8 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from django.conf.urls.static import static
-
-from clients.views import UserViewSet
+from clients.views import UserViewSet, docView
 from devopsProject import settings
 
 router = DefaultRouter(trailing_slash=False)
@@ -30,4 +29,6 @@ urlpatterns = \
         path('', include(router.urls)),
         path('admin/', admin.site.urls),
         path('', include('django_prometheus.urls')),
+        path('doc/', docView.as_view()),
+
     ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

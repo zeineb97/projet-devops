@@ -33,7 +33,7 @@
 
 ## Installation
 ```
-	pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 ## Structure 
 
@@ -63,16 +63,16 @@ Admin credentials :
 
 ## Use
 
-We can test the API using [curl](https://curl.haxx.se/) or [httpie](https://github.com/jakubroztocil/httpie#installation). Httpie is a user friendly http client that's written in Python. Let's install that.
+We can test the API using [curl](https://curl.haxx.se/) 
+```
+curl 'https://devops-project-cd.herokuapp.com/clients'
 
-You can install httpie using pip:
 ```
-pip install httpie
-```
+
 
 First, we have to start up Django's development server.
 ```
-	python manage.py runserver
+python manage.py runserver
 ```
 
 ## Live Demo 
