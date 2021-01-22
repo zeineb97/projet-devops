@@ -8,5 +8,5 @@ global:
   — job_name: monitoring
   static_configs:
   — targets:
-  — host.docker.internal
+    — host.docker.internal
   
