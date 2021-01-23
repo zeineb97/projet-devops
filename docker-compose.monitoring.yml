@@ -1,5 +1,8 @@
 version: '3.6'
 
+volumes:
+  grafana_data: {}
+
 services:
   prometheus:
     image: prom/prometheus:v2.21.0
@@ -16,6 +19,14 @@ services:
     image: grafana/grafana:6.5.2
     ports:
       - "3060:3000"
+    volumes: 
+      -  grafana_data:/var/lib/grafana
+      - ./grafana/provisioning/:/etc/grafana/provisioning/
+    env_file: 
+      - ./grafana/config.monitoring
+    restart: always
+
+
 
 #volumes:
  # prometheus-data:
