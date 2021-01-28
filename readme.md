@@ -74,6 +74,12 @@ First, we have to start up Django's development server.
 ```
 python manage.py runserver
 ```
+To run Monitoring Tools 
+```
+docker-compose -f docker-compose.monitoring.yml up 
+
+```
+
 
 ## Live Demo 
 This Project is deployed on Heroku. 
