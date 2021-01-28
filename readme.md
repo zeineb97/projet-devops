@@ -21,9 +21,10 @@
 - Django REST Framework
 - Django Rest Auth
 - Django Prometheus (2.1)
+- PostgreSQL 
 #### Technologies 
 - [Django](https://www.djangoproject.com) :  A Python-based free and open-source web framework 
-- [SQlite](https://www.sqlite.org/index.html): SQLite is a C-language library that implements a small, fast, self-contained, high-reliability, full-featured, SQL database engine. 
+- [PostgreSQL](https://www.postgresql.org): PostgreSQL is a powerful, open source object-relational database system with over 30 years of active development  that has earned it a strong reputation for reliability, feature robustness, and performance.
 - [Prometheus](https://prometheus.io) : An open-source monitoring system with a dimensional data model, flexible query language, efficient time series database and modern alerting approach.
 - [Grafana](https://grafana.com): Grafana is the open source analytics & monitoring solution for every database.
 - [Docker](https://www.docker.com) : Docker is a set of platform as a service products that use OS-level virtualization to deliver software in packages called containers.
