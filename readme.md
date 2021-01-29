@@ -55,6 +55,7 @@ Endpoint |HTTP Method | CRUD Method | Result
 - `Application level metrics endpoint` :  to monitor our application metrics we should navigate to `/metrics`. 
 
 
+[Back To The Top ](#End-of-Semester-Project)
 
 ```
 Admin credentials : 
